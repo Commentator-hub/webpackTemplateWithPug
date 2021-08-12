@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -41,7 +40,6 @@ module.exports = {
             minify: false,
             template: path.resolve(__dirname, './src/pug/index.pug')
         }),
-        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: filename('css')
         }),

@@ -1,0 +1,25 @@
+.location {
+  &__header {
+    align-items: center;
+    display: flex;
+
+    & > * {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__current {
+    display: flex;
+
+    &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 4px 4.5px 0 4.5px;
+      border-color: #000000 transparent transparent transparent;
+    }
+  }
+}

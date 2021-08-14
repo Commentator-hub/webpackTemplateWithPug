@@ -1,1 +1,20 @@
-header { flex: 0 0 auto; }
+.header {
+  .container {
+    align-items: center;
+    display: flex;
+  }
+  &-top {
+    padding: 12px 0;
+    &__user-nav {
+      margin-left: auto;
+    }
+
+    &__location {
+      margin-right: 80px;
+    }
+  }
+  &-main {
+    background-color: $dark-bg-color;
+    padding: 20px 0;
+  }
+}

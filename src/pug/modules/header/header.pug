@@ -2,12 +2,15 @@ header.header
     .header-top
         .container
             .location.header-top__location
-                .location__body
+                .location__header
+                    +svgIcon('map')
+                    +svgIcon('map')
+
                     span.location__current Нижний Новгород
                 .location__body
-    include ../navigation/main-nav
-        .user-nav.header-top__user-nav
-            a(href='#').user-nav__link Войти
+            include ../navigation/main-nav
+            .user-nav.header-top__user-nav
+                a(href='#').user-nav__link Войти
     .header-main
         .container
             .catalog.header-main__catalog
@@ -20,6 +23,6 @@ header.header
                 input(placeholder='Артикул или название товара').input-field
             .order-callback
                 span.order-callback__description Звоните круглосуточно
-                a(href='tel:+74993348888').order-callback__prhone + 7 499 334-88-88
+                a(href='tel:+74993348888').order-callback__phone + 7 499 334-88-88
                 a(href='').order-callback__link Заказать звонок
-    include ../basket/basket-prev
+                include ../basket/basket-prev

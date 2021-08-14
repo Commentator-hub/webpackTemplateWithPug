@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -43,6 +44,9 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: filename('css')
         }),
+        new SpriteLoaderPlugin({
+            plainSprite: true
+        })
     ],
     devtool: 'inline-source-map',
     devServer: {
@@ -53,6 +57,17 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.svg$/, // your icons directory
+                loader: 'svg-sprite-loader',
+                options: {
+                    extract: true,
+                    spriteFilename: 'sprite.svg',
+                    runtimeCompat: true,// this is the destination of your sprite sheet,
+                    output: './src/static/images/svg/sprite.svg'
+                }
+            },
+
             {
                 test: /\.css$/,
                 use: cssLoaders()
@@ -70,10 +85,10 @@ module.exports = {
                 test: /\.pug$/,
                 use: ['pug-loader']
             },
-            {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource',
-            },
+            // {
+            //     test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            //     type: 'asset/resource',
+            // },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',

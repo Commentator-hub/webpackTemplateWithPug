@@ -1,18 +1,17 @@
 .sandwich {
   cursor: pointer;
-  display: none;
-  height: 20px;
+  height: 14px;
   position: relative;
-  width: 32px;
+  width: 23px;
   &--active {
     .sandwich__line {
       &--top {
-        top: 10px;
+        top: 6px;
         transform: rotate(45deg);
       }
-      &--middle {opacity: 0;}
+      &--middle {opacity: 0}
       &--bottom {
-        top: 10px;
+        top: 6px;
         transform: rotate(-45deg);
       }
     }
@@ -25,8 +24,8 @@
     position: absolute;
     transition: all linear .4s;
     width: 100%;
-    &--top {top: 0}
-    &--middle {top: 9px}
+    &--top {top: 6px}
+    &--middle {top: 12px}
     &--borrom {top: 18px}
   }
 }

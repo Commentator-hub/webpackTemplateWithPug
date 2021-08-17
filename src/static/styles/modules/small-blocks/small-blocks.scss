@@ -1,1 +1,53 @@
 @import 'location';
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  align-items: center;
+  .svg-icon__logo-main {
+    width: 90px;
+    height: 60px;
+    fill: #f8e71c;
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  & > * {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  .input-field {
+    flex: 0 0 220px;
+    width: 220px;
+  }
+}
+
+.svg-icon__search {
+  @include size(22px);
+  fill: $white;
+}
+
+.order-callback {
+  display: flex;
+  flex-direction: column;
+  &__description {
+    font-size: 12px;
+  }
+  &__phone {
+    color: $main-action-color;
+    font-size: 24px;
+    font-family: $boldest-font;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+  &__link {
+    color: $white;
+    font-size: 14px;
+    text-decoration: underline;
+    font-family: $medium-font;
+  }
+}

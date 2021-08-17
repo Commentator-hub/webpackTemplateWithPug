@@ -10,12 +10,9 @@ html(lang="ru-RU")
         meta(name="keywords" content="")
 
     body
-        .wrapper
-            include ../modules/header/header
-            .content
-                block content
-            include ../modules/footer/footer
+        include ../modules/header/header
+        .content
+        block content
+        include ../modules/footer/footer
 
         block script
-
-

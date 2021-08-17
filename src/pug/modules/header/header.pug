@@ -4,8 +4,6 @@ header.header
             .location.header-top__location
                 .location__header
                     +svgIcon('map')
-                    +svgIcon('map')
-
                     span.location__current Нижний Новгород
                 .location__body
             include ../navigation/main-nav
@@ -13,16 +11,15 @@ header.header
                 a(href='#').user-nav__link Войти
     .header-main
         .container
-            .catalog.header-main__catalog
-                .sandwich
-                    .sandwich__line.sandwich__line--top
-                    .sandwich__line.sandwich__line--middle
-                    .sandwich__line.sandwich__line--bottom
-                span.catalog__title Каталог стройматериалов
+            .logo
+                +svgIcon('logo-main')
+                span.logo__text Продажа стройматериалов
+            include ../navigation/catalog-nav
             .search.header-main__search
-                input(placeholder='Артикул или название товара').input-field
-            .order-callback
+                input(placeholder='Артикул или название товара').input-field.input-field--size-small
+                +svgIcon('search')
+            .order-callback.header-main__order-callback
                 span.order-callback__description Звоните круглосуточно
                 a(href='tel:+74993348888').order-callback__phone + 7 499 334-88-88
                 a(href='').order-callback__link Заказать звонок
-                include ../basket/basket-prev
+            include ../basket/basket-prev

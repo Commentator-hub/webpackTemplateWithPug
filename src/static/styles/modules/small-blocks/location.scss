@@ -1,6 +1,7 @@
 .location {
-  flex: 0 0 165px;
-  width: 165px;
+  $locationWidth: 175px;
+  flex: 0 0 $locationWidth;
+  width: $locationWidth;
   &__header {
     align-items: center;
     cursor: pointer;
@@ -11,6 +12,10 @@
         margin-right: 10px;
       }
     }
+  }
+  .svg-icon__map {
+    @include size(16px);
+    fill: $base-text-color;
   }
 
   &__current {

@@ -12,7 +12,6 @@
     fill: #f8e71c;
   }
 }
-
 .search {
   display: flex;
   align-items: center;
@@ -26,12 +25,10 @@
     width: 220px;
   }
 }
-
 .svg-icon__search {
   @include size(22px);
   fill: $white;
 }
-
 .order-callback {
   display: flex;
   flex-direction: column;
@@ -50,5 +47,19 @@
     font-size: 14px;
     text-decoration: underline;
     font-family: $medium-font;
+  }
+}
+.title {
+  &-page {
+    font-size: 40px;
+    font-family: $medium-font;
+    text-shadow: red 0 0 4px;
+    line-height: 1.25;
+  }
+  &-section {
+    font-size: 40px;
+    font-family: $medium-font;
+    line-height: 1.25;
+    margin-bottom: 20px;
   }
 }

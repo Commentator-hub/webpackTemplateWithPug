@@ -27,7 +27,7 @@ const cssLoaders = loader => {
 module.exports = {
     mode: isDev ? 'development' : 'production',
     entry: {
-        main: path.resolve('./src/app.js')
+        main: path.resolve(__dirname, 'src/app.js')
 
     },
     output: {
@@ -50,10 +50,8 @@ module.exports = {
     ],
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: [path.resolve(__dirname, "dist")],
         port: 8080,
         open: true,
-        watchContentBase: true
     },
     module: {
         rules: [
@@ -85,12 +83,8 @@ module.exports = {
                 test: /\.pug$/,
                 use: ['pug-loader']
             },
-            // {
-            //     test: /\.(png|svg|jpg|jpeg|gif)$/i,
-            //     type: 'asset/resource',
-            // },
             {
-                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                test: /\.(png|svg|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
             },
             {
@@ -106,6 +100,6 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.js', '.json', '.png', '.scss']
+        extensions: ['.js', '.json', '.png', '.scss', 'jpg', 'jpeg', '.svg']
     },
 }

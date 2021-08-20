@@ -1,0 +1,52 @@
+.advantages {
+  display: flex;
+  & > * {
+    flex: 1;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.advantage {
+  display: flex;
+  & > * {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+  .svg-icon__funds {
+    fill: $main-action-color;
+    height: 64px;
+    width: 43px;
+  }
+
+  .svg-icon__diagram {
+    @include size(50px);
+  }
+  .svg-icon__invest {
+    height: 48px;
+    width: 54px;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    font-family: $medium-font;
+    margin-bottom: 4px;
+  }
+  &__text {
+    color: $text-info-color;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+  }
+
+  &__link {
+    font-family: $medium-font;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    margin-top: 8px;
+    text-decoration: underline;
+  }
+}

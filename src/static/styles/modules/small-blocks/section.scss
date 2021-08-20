@@ -1,0 +1,15 @@
+.s-bg-white {
+  background-color: $white;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  &__right {
+    margin-left: auto;
+  }
+  &__link {
+    color: $link-color;
+    text-decoration: underline;
+    font-family: $medium-font;
+  }
+}
